@@ -28,6 +28,3 @@ export const Statistics = ({ title=null, stats })=>{
     )
 };
 
-
-{/* <span class="label">.docx</span>
-      <span class="percentage">4%</span> */}
