@@ -15,7 +15,7 @@ const StatElem = ({label,percentage}) => {
 export const Statistics = ({ title=null, stats })=>{
     return (
         <StatWrapper>
-            {title && <h2>{title}</h2>}
+            {title && <h2 className="titleStat">{title}</h2>}
             <StatList>
                 {stats.map(({ id, label, percentage }) => (
                     <StatElem key ={id} label ={label} percentage ={percentage} />

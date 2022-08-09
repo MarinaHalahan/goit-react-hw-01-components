@@ -1,13 +1,14 @@
-import {ProfileWrapper, DescriptionUser,StatsWrapper} from "./Profile.styled"
+import {ProfileWrapper, DescriptionUser,StatsWrapper, ProfileSection} from "./Profile.styled"
 import {Stats} from "../userStats/Stats.js"
 
 
 export const Profile = ({ username, tag, avatar, location, stats:{followers, views, likes } }) => {
-    return (
+  return (
+      <ProfileSection>
         < ProfileWrapper >
             <DescriptionUser>
-        <img src={avatar} alt="User avatar" width={150}/>
-        <p >{username}</p>
+        <img className = "userImg" src={avatar} alt="User avatar" width={150}/>
+        <p className="nameUser">{username}</p>
         <p >@{tag}</p>
         <p >{location}</p>
             </DescriptionUser>
@@ -18,7 +19,8 @@ export const Profile = ({ username, tag, avatar, location, stats:{followers, vie
                 
         </StatsWrapper>
                  
-        </ProfileWrapper >)
+      </ProfileWrapper >
+      </ProfileSection>)
     
     
 }
