@@ -1,4 +1,5 @@
-import {ProfileWrapper, DescriptionUser,StatsWrapper, ProfileSection} from "./Profile.styled"
+import PropTypes from 'prop-types';
+import { ProfileWrapper, DescriptionUser, StatsWrapper, ProfileSection } from "./Profile.styled"
 import {Stats} from "../userStats/Stats.js"
 
 
@@ -23,7 +24,20 @@ export const Profile = ({ username, tag, avatar, location, stats:{followers, vie
       </ProfileSection>)
     
     
-}
+};
+
+Profile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  avatar: PropTypes.string,
+  location: PropTypes.string,
+  stats: PropTypes.shape({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  })
+
+};
 
 
 

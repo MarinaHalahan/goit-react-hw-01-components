@@ -1,4 +1,5 @@
-import {ItemWrapper, Status} from "./FriendItem.styled"
+import PropTypes from 'prop-types';
+import { ItemWrapper, Status } from "./FriendItem.styled"
 
 export const FriendItem = ({name, isOnline,avatar }) => {
     return (
@@ -10,3 +11,9 @@ export const FriendItem = ({name, isOnline,avatar }) => {
 
     );
 }
+
+FriendItem.propTypes = {
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+    avatar : PropTypes.string,
+};

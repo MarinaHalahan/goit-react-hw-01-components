@@ -1,4 +1,5 @@
-import { StatWrapper, StatList, StatItem} from "./Statistics.syled";
+import { StatWrapper, StatList, StatItem } from "./Statistics.styled";
+import PropTypes from 'prop-types';
 
 const StatElem = ({label,percentage}) => {
     return (
@@ -26,5 +27,16 @@ export const Statistics = ({ title=null, stats })=>{
             
         </StatWrapper>
     )
+};
+
+StatElem.propTypes = {
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+   
+};
+
+Statistics.propTypes = {
+    title: PropTypes.string,
+    stats:PropTypes.array.isRequired,
 };
 

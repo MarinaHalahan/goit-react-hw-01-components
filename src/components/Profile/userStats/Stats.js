@@ -1,4 +1,5 @@
-import { StatsInfo,Label, Quantity } from "./Stats.styled"
+import PropTypes from 'prop-types';
+import { StatsInfo, Label, Quantity } from "./Stats.styled"
 
 
 export const Stats = ({ text, number }) => {
@@ -10,7 +11,10 @@ export const Stats = ({ text, number }) => {
 };
 
 
-
+Stats.propTypes = {
+    text: PropTypes.string,
+    number : PropTypes.number,
+};
 
 
 

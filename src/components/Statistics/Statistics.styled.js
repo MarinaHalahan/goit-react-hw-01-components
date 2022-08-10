@@ -19,10 +19,11 @@ width: 100%;
 `;
 
 export const StatList = styled.ul`
-justify-content: center;
-padding: 0;
+    justify-content: center;
+    padding: 0;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 40px;
     list-style: none;
     display: flex;
 
