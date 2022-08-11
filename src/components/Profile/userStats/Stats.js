@@ -7,8 +7,7 @@ export const Stats = ({ text, number }) => {
         <Label>{text}</Label>
         <Quantity>{number}</Quantity>
     </StatsInfo>
-)
-};
+)};
 
 
 Stats.propTypes = {
